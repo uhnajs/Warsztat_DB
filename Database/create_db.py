@@ -10,6 +10,7 @@ db_connector = {
 }
 def create_database():
     try:
+        # Używamy **db_connector do rozpakowania słownika jako argumentów nazwanych
         cnx = connect(**db_connector)
         cnx.autocommit = True
         with cnx.cursor() as cursor:
